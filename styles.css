@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean');
+
+
+.background{
+
+    background-image: url(back2000.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+html,body{
+    font-size:13px;
+    color: #666666;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box; 
+    
+
+    /*
+    block, inline, inline-block
+    margin 형제간 병합 :큰것으로 
+    margin 부모 태그에 영향 : 자식 태그  position : absolute position : static, fixed, relative
+    float 
+    clear : both 
+    */
+}
+
+h1{
+    margin: 5px 0px 0px 0px;
+    padding:30px 0px 30px 0px;
+   font-family: 'Noto Sans KR', sans-serif;
+    color:  #C03;
+   font-size:48px;
+   font-weight: 600;
+   vertical-align:bottom;
+   border: 5px solid  #C03;
+   /* background-image: url(back.jpeg); */
+   background-repeat: no-repeat;
+   background-position: 400px 0px;
+   border-width: 10px 3px 1px 3px;
+   opacity: 1;
+   background-color: whitesmoke;
+   /* width:800px; */
+   /* text-decoration: line-through; */
+}
+
+
+
+.container{
+    background-color: #222222;
+    width: 1000px;
+    text-align: center;
+ 
+}
+
+.additionalInfo{
+    padding: 30px 30px 30px;
+    border-width: 3px 0px 0px 0px;
+    /* background: linear-gradient(to botto)  ; */
+    text-align: right;
+    font-size: 16px;
+
+}
+.inputBox{
+display: inline-block;
+border: 1px solid #C03;
+border-left-width: 5px;
+padding: 7px;
+margin: 6px;
+background-color: whitesmoke;
+}
+
+.selSexBox{
+    margin:10px;
+}
+
+.inputBodyWeight{
+    width: 40px;  
+    height: 30px; 
+    text-align:center;
+    border: 1px solid  #999;
+    border-radius: 4px;
+
+}
+
+.barWeight{
+    width: auto;  
+    height: 30px; 
+    text-align:center;
+    border: 1px solid  #999;
+    border-radius: 4px;
+}
+
+.cardTitle{
+    text-align:center;
+    text-shadow: 0 1px #FFF;
+    vertical-align: middle;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+
+.workoutCard{
+    margin : 0px;
+    margin-bottom: 200px;
+    height: 280px;
+    width: 230px;
+    padding : 20px;
+    font-size:14px;
+    display : inline-block;
+    background-color :whitesmoke;
+    border: 1px solid #C03;
+    border-width: 1px 1px 1px 6px;
+}
+
+.card input{
+    width: 40px;  
+    height: 25px; 
+    text-align:center;
+    border: 1px solid  #999;
+    border-radius: 3px;
+}
+
+.tableCard{
+    display: inline-block;
+}
+
+table.type11 {
+    box-sizing: border-box; 
+    border: 1px solid #C03;
+    border-width: 1px 1px 1px 0px;
+    width:230px;
+    background-color: whitesmoke;
+    margin: 2px;
+}
+table.type11 th {
+
+    padding: 10px;
+    border: none;
+    border-left: 5px solid #C03;
+    border-bottom: 1px solid #DDD;
+    background: #FCF0F3;
+    text-align:center;
+    text-shadow: 0 1px #FFF;
+    vertical-align: middle;
+    font-size: 15px;
+    font-weight: 700;
+}
+table.type11 td {
+    
+    height:20px;
+    width: 200px;
+    padding: 5px;
+    border-bottom: 1px solid #DDD;
+    text-align: left;
+    vertical-align: baseline;
+}
+
