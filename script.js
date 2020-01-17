@@ -103,7 +103,7 @@ function level(oneRm, workout) {
     };
     var bodyWeight = $('#bodyWeight').val();
     // var sex = $("#selSex").val();
-    console.log($('#selSex').prop('checked'));
+//    console.log($('#selSex').prop('checked'));
     if($('#selSex').prop('checked')){
         var sex = 'M';
     }else{
@@ -165,10 +165,17 @@ function input(workout) {
 
 
 function makingTableData(oneRm, workout) {
-    var oneRmW; // Workout 0ne RM -> 90% of 1RM
-    oneRmW = oneRm * 0.9;
+    var oneRmW; // Workout 0ne RM -> 90% of 1RM first only
+
 
     var barWeight = Number($("#sel1").val());
+    console.log($('#selFirst').prop('checked'));
+
+    if($('#selFirst').prop('checked')){
+        oneRmW = oneRm * 0.9;
+    }else{
+        oneRmW = oneRm;
+    }
 
     var i;
     for (i = 40; i < 100; i++) {
@@ -246,6 +253,11 @@ $(document).ready(function () {
         output();
         console.log("changed");
     });
+
+    $("#selFirst").change(function() {
+        output();
+        console.log("First");
+    });
         
     $("#bodyWeight").change(function () {
         output();
@@ -257,6 +269,13 @@ $(document).ready(function () {
     catchChange("squat");
     catchChange("deadlift");
     catchChange("shoulder");
+
+    $("#531PP").hide();
+    $(document).ready(function(){
+        $("#531pToggle").click(function(){
+          $("#531PP").show(1000);
+        });
+      });
 //    makingTable("bench");
 });
 
