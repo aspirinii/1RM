@@ -2,9 +2,10 @@
 <html lang="ko">
 
 <head>
-    <title>1RM 계산기 531 훈련 프로그램</title>
+    <title>1RM Calculator 5/3/1 Strength Training Program
+    </title>
     <meta charset="UTF-8">
-
+    <link rel="icon" href="25.png" />
     <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script
@@ -58,8 +59,10 @@
                     <input type="num" id="bench_input2"
                         value=5>
                     <br>
-                    <p>weight&nbsp; x &nbsp;rep&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                
+                    <p>weight&nbsp; x
+                        &nbsp;rep&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
+
                     <div class=showBox>
                         <div class=bench_out> Bench 1RM:
                         </div>
@@ -77,8 +80,10 @@
                     <input type="num" id="squat_input2"
                         value=5>
                     <br>
-                    <p>weight&nbsp; x &nbsp;rep&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                    
+                    <p>weight&nbsp; x
+                        &nbsp;rep&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
+
                     <div class=showBox>
                         <div class=squat_out> Sqaut 1RM:
                         </div>
@@ -96,7 +101,9 @@
                     <input type="num" id="deadlift_input2"
                         value=3>
                     <br>
-                    <p>weight &nbsp;x &nbsp;rep&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <p>weight &nbsp;x
+                        &nbsp;rep&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
                     <div class=showBox>
                         <div class=deadlift_out> Deadlift
                             1RM :
@@ -114,7 +121,9 @@
                     <input type="num" id="shoulder_input2"
                         value=2>
                     <br>
-                    <p>weight&nbsp; x &nbsp;rep&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <p>weight&nbsp; x
+                        &nbsp;rep&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
                     <div class=showBox>
                         <div class=shoulder_out> Shoulder
                             Press
@@ -132,8 +141,12 @@
                   Making 531 Program
                 </a>
             </p> -->
+            <button id=saveBtn1 type="button" class=inputBox2>SaveData</button>
+        
 
-            <button id="531pToggle" class=inputBox>Set 531 Program</button>
+            <button id="531pToggle" class=inputBox2>Set 531
+                Program</button>
+                            
         </div>
 
         <div class=container id="531PP">
@@ -147,759 +160,121 @@
                 <br>
                 <span class=selSexBox>
                     <input id='selFirst' type="checkbox"
-                        checked data-toggle="toggle"
-                        data-on="First" data-off="In Progress"
+                        data-toggle="toggle" data-on="First"
+                        data-off="In Progress"
                         data-onstyle="default"
                         data-offstyle="danger"
                         data-size="small">
                 </span>
+                <span class=selSexBox>
+                        <input id='selhalf' type="checkbox"
+                            data-toggle="toggle" data-on="Show OneSide"
+                            data-off="Hide OneSide"
+                            data-onstyle="default"
+                            data-offstyle="danger"
+                            data-size="small">
+                    </span>
                 <br>
 
             </div>
             <div class=card id="531P">
                 <!-- bench -->
                 <div class=tableCard>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week1 Bench
-                                    Press
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=bench_65>65%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_65half>65%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=bench_75>75%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_75half>75%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=bench_85>85%</td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_85half>85%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week2 Bench
-                                    Press
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=bench_70>70%</td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_70half>70%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=bench_80>80%</td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_80half>80%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=bench_90>90%</td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_90half>90%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week3 Bench
-                                    Press
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=bench_75>75%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_75half>75%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=bench_85>85%</td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_85half>85%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=bench_95>95%</td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_95half>95%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week4
-                                    Bench Press
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=bench_40>40%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_40half>40%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=bench_50>50%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_50half>50%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=bench_60>60%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=bench_60half>60%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                    <div class=tableCard>
+                        <table id="benchTable"
+                            class="type11">
 
+                        </table>
+                    </div>
+                    <div class=tableCard>
+                        <table id="squatTable"
+                            class="type11">
 
-                <!-- bench -> Sqaut -->
-                <div class=tableCard>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week1 Sqaut
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=squat_65>65%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_65half>65%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=squat_75>75%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_75half>75%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=squat_85>85%</td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_85half>85%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week2 Sqaut
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=squat_70>70%</td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_70half>70%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=squat_80>80%</td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_80half>80%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=squat_90>90%</td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_90half>90%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week3 Sqaut
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=squat_75>75%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_75half>75%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=squat_85>85%</td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_85half>85%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=squat_95>95%</td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_95half>95%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week4
-                                    Sqaut
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=squat_40>40%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_40half>40%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=squat_50>50%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_50half>50%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=squat_60>60%</td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=squat_60half>60%
-                                    one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- Sqaut-> Deadlift -->
-                <div class=tableCard>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week1
-                                    Deadlift
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=deadlift_65>65%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_65half>
-                                    65% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=deadlift_75>75%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_75half>
-                                    75% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=deadlift_85>85%
-                                </td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_85half>
-                                    85% one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week2
-                                    Deadlift
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=deadlift_70>70%
-                                </td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_70half>
-                                    70% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=deadlift_80>80%
-                                </td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_80half>
-                                    80% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=deadlift_90>90%
-                                </td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_90half>
-                                    90% one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week3
-                                    Deadlift
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=deadlift_75>75%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_75half>
-                                    75% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=deadlift_85>85%
-                                </td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_85half>
-                                    85% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=deadlift_95>95%
-                                </td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_95half>
-                                    95% one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week4
-                                    Deadlift
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=deadlift_40>40%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_40half>
-                                    40% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=deadlift_50>50%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_50half>
-                                    50% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=deadlift_60>60%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=deadlift_60half>
-                                    60% one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- deadlift -> Shoulder Press -->
-                <div class=tableCard>
+                        </table>
+                    </div>
+                    <div class=tableCard>
+                        <table id="deadliftTable"
+                            class="type11">
 
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week1
-                                    Shoulder Press
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=shoulder_65>65%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_65half>
-                                    65% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=shoulder_75>75%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_75half>
-                                    75% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=shoulder_85>85%
-                                </td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_85half>
-                                    85% one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week2
-                                    Shoulder Press
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=shoulder_70>70%
-                                </td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_70half>
-                                    70% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=shoulder_80>80%
-                                </td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_80half>
-                                    80% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=shoulder_90>90%
-                                </td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_90half>
-                                    90% one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week3
-                                    Shoulder Press
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=shoulder_75>75%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_75half>
-                                    75% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=shoulder_85>85%
-                                </td>
-                                <td>3rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_85half>
-                                    85% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=shoulder_95>95%
-                                </td>
-                                <td>Until Failure</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_95half>
-                                    95% one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="type11">
-                        <thead>
-                            <tr>
-                                <th colspan=3>Week4
-                                    Shoulder Press
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set1</td>
-                                <td class=shoulder_40>40%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_40half>
-                                    40% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set2</td>
-                                <td class=shoulder_50>50%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_50half>
-                                    50% one side</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Set3</td>
-                                <td class=shoulder_60>60%
-                                </td>
-                                <td>5rep</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class=shoulder_60half>
-                                    60% one side</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        </table>
+                    </div>
+                    <div class=tableCard>
+                        <table id="shoulderTable"
+                            class="type11">
+
+                        </table>
+                    </div>
 
                 </div>
             </div>
         </div>
+        
+        <div class=container id="storage">
+                <button id=saveBtn2 type="button" class=inputBox2>SaveData</button>
+                <button id=clearBtn type="button" class=inputBox2>ClearData</button>
+                <div id=savedDate>???</div>
+
+            <h1> Data Storage </h1>
+            <div class=card>
+                <span class=workoutCard>
+                    <p class=cardTitle>Bench Press </p>
+                    <p id=benchData class=cardTitle>Bench Press </p>
+                    <div id=benchResult1>
+                        show1
+                    </div>
+                    <div id=benchResult2>
+                        show2
+                    </div>
+                    <div id=benchResult3>
+                        show3
+                    </div>
+                </span>
+
+                <span class=workoutCard>
+                        <p class=cardTitle>Squat </p>
+                    <p id=squatData class=cardTitle>Squat </p>
+                    <div id=squatResult1>
+                        show1
+                    </div>
+                    <div id=squatResult2>
+                        show2
+                    </div>
+                    <div id=squatResult3>
+                            show3
+                        </div>
+                </span>
+
+                <span class=workoutCard>
+                        <p class=cardTitle>Deadlift </p>
+                    <p id=deadliftData class=cardTitle>Deadlift </p>
+                    <div id=deadliftResult1>
+                        show1
+                    </div>
+                    <div id=deadliftResult2>
+                        show2
+                    </div>
+                    <div id=deadliftResult3>
+                            show3
+                        </div>
+                </span>
+                <span class=workoutCard>
+                        <p class=cardTitle>Shoulder Press
+                        <p id=shoulderData class=cardTitle>Shoulder Press </p>
+                        <div id=shoulderResult1>
+                            show1
+                        </div>
+                        <div id=shoulderResult2>
+                            show2
+                        </div>
+                        <div id=shoulderResult3>
+                            show3
+                        </div>
+                    </span>
+            </div>
+            <br>
+        </div>
+
+    </div>
     </div>
 </body>
 
