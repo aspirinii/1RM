@@ -4,8 +4,7 @@ $(document).ready(function () {
 
     
         for (workout of workoutList) {
-        var weight = localStorage.getItem(workout + '_input1');
-        var rep = localStorage.getItem(workout + '_input2')
+            saveData(input(workout), workout);
 
         }
          displayLocalData();
@@ -15,7 +14,7 @@ $(document).ready(function () {
     $('#saveBtn2').click(function () {
         for (workout of workoutList)
             saveData(input(workout), workout);
-            displayLocalData();
+         displayLocalData();
     });
 
     $('#clearBtn').click(function () {
