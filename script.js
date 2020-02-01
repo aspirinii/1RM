@@ -2,19 +2,16 @@ $(document).ready(function () {
 
     $('#saveBtn1').click(function () {
 
-    
         for (workout of workoutList) {
             saveData(input(workout), workout);
-
         }
-         displayLocalData();
-        
-    
-        });
+
+
+    });
     $('#saveBtn2').click(function () {
         for (workout of workoutList)
             saveData(input(workout), workout);
-         displayLocalData();
+
     });
 
     $('#clearBtn').click(function () {
@@ -23,7 +20,7 @@ $(document).ready(function () {
             for (week = 1; week < 4; week++) {
                 localStorage.removeItem(week + '_' + workout + '_weight');
                 localStorage.removeItem(week + '_' + workout + '_rep');
-                localStorage.removeItem(week + '_' + workout + 'checkBox');
+            
             }
         }
         location.reload()
@@ -46,7 +43,7 @@ $(document).ready(function () {
 
 function calculator(weight, rep, workout) {
     if (rep === 1) {
-        var ave=weight;
+        var ave = weight;
         var result = $("." + workout + "_out");
         result.html(workout.toUpperCase() + " 1RM : " + weight);
         return ave;
@@ -203,7 +200,7 @@ function level(oneRm, workout) {
                     nextLevelpercent = percent;
                     nextLevelratio = value;
                     var cal = ((currentLevelpercent - ((ratio - currentLevelratio) / (nextLevelratio - currentLevelratio) * (currentLevelpercent - nextLevelpercent))) * 100).toFixed(2);
-                
+
                     $("." + workout + "_out").append("<br> (Powerlifting Top " + cal + "%) <br> ");
                 }
             }
@@ -351,10 +348,12 @@ var workoutList = ["bench", "squat", "deadlift", "shoulder"];
 function catchAllChange() {
     function catchChange(workout) {
         $("#" + workout + "_input1").change(function () {
-            output();
+            
+                saveData(input(workout), workout);
+            
         });
         $("#" + workout + "_input2").change(function () {
-            output();
+            saveData(input(workout), workout);
         });
     }
     catchChange("bench");
@@ -362,13 +361,19 @@ function catchAllChange() {
     catchChange("deadlift");
     catchChange("shoulder");
     $("#sel1").change(function () {
-        output();
-    });
+        for (workout of workoutList) {
+            saveData(input(workout), workout);
+        }
+    }); 
     $("#selSex").change(function () {
-        output();
+        for (workout of workoutList) {
+            saveData(input(workout), workout);
+        }
     });
     $("#selFirst").change(function () {
-        output();
+        for (workout of workoutList) {
+            saveData(input(workout), workout);
+        }
     });
     $("#selhalf").change(function () {
         if ($('#selhalf').prop('checked')) {
@@ -376,10 +381,19 @@ function catchAllChange() {
         } else {
             $('.half').show();
         }
-        output();
+        for (workout of workoutList) {
+            saveData(input(workout), workout);
+        }
     });
     $("#bodyWeight").change(function () {
-        output();
+        for (workout of workoutList) {
+            saveData(input(workout), workout);
+        }
+    });
+    $(".bar_weight_last").change(function () {
+        for (workout of workoutList) {
+            saveData(input(workout), workout);
+        }
     });
 }
 
@@ -457,7 +471,7 @@ function mainLifting(week, workout) {
             $('<td>').append("Set3"),
             $('<td id=' + week + workout + '_weight2 class=' + workout + '_' + percentTable[2] + '>'),
             $('<td>').append(
-                '<select id=' + week + workout + ' class=\"bar_weight last\"></select>'),
+                '<select id=' + week + workout + ' class=\"bar_weight_last\"></select>'),
 
         ),
         $('<tr class=half>').append(
@@ -606,19 +620,20 @@ function saveData(oneRm, workout) {
         var val2 = $('#' + workout + '_input2').val();
         localStorage.setItem(workout + '_input1', val1)
         localStorage.setItem(workout + '_input2', val2)
-        
-        console.log("save",localStorage.getItem(workout + "_input1"), localStorage.getItem(workout + "_input2")  )
-   
+
+        console.log("save", localStorage.getItem(workout + "_input1"), localStorage.getItem(workout + "_input2"))
+
 
         for (week = 1; week < 4; week++) {
             var twrep = Number($('#' + week + workout).val());
             localStorage.setItem(week + '_' + workout + '_rep', twrep);
         }
-       
+
     } else {
         $('#' + workout + 'Date').html("Sorry, your browser does not support web storage... Throw your browser to trash bin");
 
     }
+    displayLocalData()
 
 }
 
@@ -634,9 +649,9 @@ function displayLocalData() {
 
         var weight = localStorage.getItem(workout + '_input1');
         var rep = localStorage.getItem(workout + '_input2')
-    
+
         $('#' + workout + '_input1').val(weight);
-         $('#' + workout + '_input2').val(rep);
+        $('#' + workout + '_input2').val(rep);
 
 
         for (week = 1; week < 4; week++) {
