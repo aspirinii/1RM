@@ -1,8 +1,56 @@
+$(document).ready(function () {
+
+    $('#saveBtn1').click(function () {
+
+    
+        for (workout of workoutList) {
+        var weight = localStorage.getItem(workout + '_input1');
+        var rep = localStorage.getItem(workout + '_input2')
+
+        }
+         displayLocalData();
+        
+    
+        });
+    $('#saveBtn2').click(function () {
+        for (workout of workoutList)
+            saveData(input(workout), workout);
+            displayLocalData();
+    });
+
+    $('#clearBtn').click(function () {
+        alert("Are you really want to cleat All data?");
+        for (workout of workoutList) {
+            for (week = 1; week < 4; week++) {
+                localStorage.removeItem(week + '_' + workout + '_weight');
+                localStorage.removeItem(week + '_' + workout + '_rep');
+                localStorage.removeItem(week + '_' + workout + 'checkBox');
+            }
+        }
+        location.reload()
+    });
+
+    createTable();
+    output()
+    appendText();
+    catchAllChange();
+    displayLocalData();
+    // $(document).scrollTop($(document).height());
+    $("#531pToggle").click(function () {
+        //   $("#531PP").show(1000);
+        $("#531PP").slideToggle("slow");
+    });
+
+
+});
+
+
 function calculator(weight, rep, workout) {
     if (rep === 1) {
-        var $result = $("." + workout + "_out");
-        $result.html(workout.toUpperCase() + " 1RM : " + weight);
-        return weight;
+        var ave=weight;
+        var result = $("." + workout + "_out");
+        result.html(workout.toUpperCase() + " 1RM : " + weight);
+        return ave;
     } else {
         var ave;
         var re1 = weight / (1.0278 - (0.0278 * rep));
@@ -156,7 +204,7 @@ function level(oneRm, workout) {
                     nextLevelpercent = percent;
                     nextLevelratio = value;
                     var cal = ((currentLevelpercent - ((ratio - currentLevelratio) / (nextLevelratio - currentLevelratio) * (currentLevelpercent - nextLevelpercent))) * 100).toFixed(2);
-
+                
                     $("." + workout + "_out").append("<br> (Powerlifting Top " + cal + "%) <br> ");
                 }
             }
@@ -175,6 +223,7 @@ function input(workout) {
     weight = Number(input1.val());
     var input2 = $("#" + workout + "_input2");
     rep = Number(input2.val());
+    // console.log(workout, weight);
     result = calculator(weight, rep, workout);
     return result;
 }
@@ -550,6 +599,7 @@ function saveTime() {
 
 function saveData(oneRm, workout) {
     saveTime();
+    console.log("진입")
     if (typeof (Storage) !== "undefined") {
         localStorage.setItem(workout + "OneRmLatest", oneRm);
         localStorage.setItem('bodyWeight', $('#bodyWeight').val())
@@ -557,13 +607,15 @@ function saveData(oneRm, workout) {
         var val2 = $('#' + workout + '_input2').val();
         localStorage.setItem(workout + '_input1', val1)
         localStorage.setItem(workout + '_input2', val2)
-
+        
+        console.log("save",localStorage.getItem(workout + "_input1"), localStorage.getItem(workout + "_input2")  )
+   
 
         for (week = 1; week < 4; week++) {
             var twrep = Number($('#' + week + workout).val());
             localStorage.setItem(week + '_' + workout + '_rep', twrep);
         }
-     
+       
     } else {
         $('#' + workout + 'Date').html("Sorry, your browser does not support web storage... Throw your browser to trash bin");
 
@@ -581,17 +633,25 @@ function displayLocalData() {
         );
         $('#bodyWeight').val(localStorage.getItem('bodyWeight'));
 
-         $('#' + workout + '_input1').val(localStorage.getItem(workout + '_input1'));
-         $('#' + workout + '_input2').val(localStorage.getItem(workout + '_input2'));
+        var weight = localStorage.getItem(workout + '_input1');
+        var rep = localStorage.getItem(workout + '_input2')
+    
+        $('#' + workout + '_input1').val(weight);
+         $('#' + workout + '_input2').val(rep);
 
 
         for (week = 1; week < 4; week++) {
 
             var cat1 = localStorage.getItem(week + '_' + workout + '_weight');
             var cat2 = localStorage.getItem(week + '_' + workout + '_rep');
+            // var j=10
+            // j++
+            // console.log(j,workout, cat1, cat2)
             var cat3 = calculatorO(cat1, cat2)
             $('#' + workout + 'Result' + week).html(week + 'Week 1RM : ' + cat1 + ' * ' + cat2 + ' = ' + cat3);
         }
+
+        output();
 
     }
 
@@ -604,52 +664,3 @@ function output() {
         level(input(workout), workout);
     };
 }
-
-
-
-
-$(document).ready(function () {
-
-
-
-    $('#saveBtn1').click(function () {
-        for (workout of workoutList)
-            saveData(input(workout), workout);
-        displayLocalData();
-    });
-    $('#saveBtn2').click(function () {
-        for (workout of workoutList)
-            saveData(input(workout), workout);
-        displayLocalData();
-    });
-
-    $('#clearBtn').click(function () {
-        alert("Are you really want to cleat All data?");
-        for (workout of workoutList) {
-            for (week = 1; week < 4; week++) {
-                localStorage.removeItem(week + '_' + workout + '_weight');
-                localStorage.removeItem(week + '_' + workout + '_rep');
-                localStorage.removeItem(week + '_' + workout + 'checkBox');
-            }
-        }
-        location.reload()
-    });
-
-
-
-
-    createTable();
-    output()
-    appendText();
-    catchAllChange();
-    displayLocalData();
-
-
-    // $(document).scrollTop($(document).height());
-    $("#531pToggle").click(function () {
-        //   $("#531PP").show(1000);
-        $("#531PP").slideToggle("slow");
-    });
-
-
-});
