@@ -497,7 +497,7 @@ function workoutTitle(week, workout) {
             title = "Week Deadlift"
             break;
         case "shoulder":
-            title = "Week Shoulder Press"
+            title = "Week Shoulder P"
             break;
         default:
             console.log("문제가있음..")
