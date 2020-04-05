@@ -641,9 +641,10 @@ function displayLocalData() {
     $('#savedDate').html("Lastest Saved Time : " + localStorage.savedDate);
 
     for (workout of workoutList) {
-        var str = "localStorage." + workout + "OneRmLatest"
+        let str = "localStorage." + workout + "OneRmLatest"
         $('#' + workout + 'Data').html(
-            $('<div>').append('Previous 1RM : ' + eval(str))
+            // $('<div>').append('Previous 1RM : ' + eval(str)),
+            $('<div>').append(`Previous 1RM : ${eval(str)}`)
         );
         $('#bodyWeight').val(localStorage.getItem('bodyWeight'));
 
@@ -676,5 +677,6 @@ function output() {
     for (workout of workoutList) {
         makingTableData(input(workout), workout);
         level(input(workout), workout);
-    };
+ 
+   };
 }
